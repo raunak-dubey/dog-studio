@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body, #root {
+    width: 100%;
+    background-color: #000;
+}
+main{
+    position: relative;
+}
+
+section{
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+    border: 2px solid white;
+}
