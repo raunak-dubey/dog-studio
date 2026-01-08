@@ -21,6 +21,8 @@ const App = () => {
           <Dog />
         </Canvas>
         <Hero />
+        <section id="section-2"></section>
+        <section id="section-3"></section>
       </main>
     </>
   );
