@@ -1,17 +1,18 @@
-import Navbar from "./Navbar";
+import Navbar from '../common/Navbar/Navbar'
+import styles from './Hero.module.css'
 
 const Hero = () => {
   return (
-    <section id="hero">
+    <section id="hero" className={styles.hero}>
       <Navbar />
-      <div id="hero-content">
-        <div className="left">
-          <h1>
+      <div className={styles.heroContent}>
+        <div className={styles.left}>
+          <h1 className={styles.heading}>
             We <br /> Make <br /> Good <br /> Shit{" "}
           </h1>
         </div>
-        <div className="bottom">
-          <p className="lead">
+        <div className={styles.bottom}>
+          <p className={styles.lead}>
             Dogstudio is a multidisciplinary creative studio at the intersection
             of art, design and technology.
           </p>
@@ -21,8 +22,8 @@ const Hero = () => {
             culture.
           </p>
         </div>
-        <div className="first-line line"></div>
-        <div className="second-line line"></div>
+        <div className={`${styles.firstLine} ${styles.line}`}></div>
+        <div className={`${styles.secondLine} ${styles.line}`}></div>
       </div>
     </section>
   );

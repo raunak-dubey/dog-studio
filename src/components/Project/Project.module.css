@@ -1,0 +1,35 @@
+.featuredProjects {
+    .titles {
+        display: flex;
+        flex-direction: column;
+        padding-inline: .8rem;
+        padding-block: 20rem;
+
+        .title {
+            display: flex;
+            gap: 4rem;
+            opacity: 0.5;
+            padding-block: 3rem;
+
+            .year {
+                font-family: Gilroy, Helvetica, Arial, sans-serif;
+                font-size: 0.64rem;
+                font-weight: 700;
+                line-height: 1;
+                text-transform: uppercase;
+                letter-spacing: .23rem;
+            }
+
+            .titleHeading {
+                font-family: Heebo-Thin, Helvetica, Arial, sans-serif;
+                font-size: 5rem;
+                font-weight: 200;
+                line-height: 0.75;
+                cursor: pointer;
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

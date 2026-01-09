@@ -1,0 +1,8 @@
+:root {
+  --color-white: #fff;
+  --color-bg: #0E101A;
+  --color-accent: #A72E35;
+
+  --font-body: Heebo, Helvetica, Arial, sans-serif;
+  --font-heading: GTSectraDisplay, Times, Georgia, serif;
+}

@@ -1,69 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-@font-face {
-    font-family: Heebo;
-    src: url('/fonts/Heebo-Regular.woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: GTSectraDisplay;
-    src: url('/fonts/GTSectraDisplay-Bold.woff2');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-html,
-body,
-#root {
-    width: 100%;
-    background-color: #171A20;
-    color: white;
-    font-family: Heebo, sans-serif;
-}
-
-main {
-    position: relative;
-}
-
-section {
-    min-height: 100vh;
-    position: relative;
-    z-index: 2;
-}
-
-#hero {
+.hero {
     position: relative;
 
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 3.125rem 2.8rem;
-
-        .elem i {
-            font-size: 1.5rem;
-        }
-
-        .elem:nth-child(2) i {
-            color: #e44141;
-        }
-
-        svg {
-            width: 6.5rem;
-            height: 1.875rem;
-            pointer-events: all;
-        }
-    }
-
-    #hero-content {
+    .heroContent {
         display: flex;
         flex-direction: column;
 
@@ -74,8 +12,8 @@ section {
             align-items: center;
             padding-top: 5rem;
 
-            h1 {
-                font-family: GTSectraDisplay, Times, Georgia, serif;
+            .heading {
+                font-family: var(--font-heading);
                 font-size: 7.5rem;
                 line-height: 0.89;
                 text-align: right;
@@ -88,7 +26,7 @@ section {
             margin-top: 9rem;
             margin-right: 3.75rem;
             margin-left: auto;
-            color: rgba(160, 168, 220, .7);
+            color: rgba(160, 168, 220, 0.7);
             line-height: 1.7;
 
             .lead {
@@ -102,12 +40,12 @@ section {
 
         .line {
             position: absolute;
-            background-color: #A72E35;
+            background-color: var(--color-accent);
             height: 1px;
             pointer-events: none;
         }
 
-        .first-line {
+        .firstLine {
             top: 50%;
             left: -16.56rem;
             width: 42.5rem;
@@ -115,7 +53,7 @@ section {
             transform: rotate(45deg) translateY(-50%) translateY(-50px);
         }
 
-        .second-line {
+        .secondLine {
             top: 21.875rem;
             right: 9.3rem;
             width: 10rem;

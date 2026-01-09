@@ -1,11 +1,14 @@
+import styles from './Navbar.module.css'
+
 const Navbar = () => {
   return (
-    <nav>
-      <div className="elem">
+    <nav className={styles.navbar}>
+      <div className={styles.elem}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="white"
           viewBox="0 0 401.23099 116.838"
+          className={styles.logo}
         >
           <path d="M97.9212,84.4793c0-13.21301-7.2132-23.3924-25.54961-23.3924h-19.6172v46.7851h19.6172c18.3364,0,25.54961-10.1797,25.54961-23.3927Zm-13.3478,0c0,9.2356-5.1908,12.6737-12.404,12.6737h-6.6739v-25.3474h6.6739c7.2132,0,12.404,3.4381,12.404,12.6737Z"></path>
           <path d="M100.972,107.872h37.078v-10.6516h-24.33701v-8.0222h21.37v-10.112h-21.37v-7.348h23.73v-10.6513h-36.47099v46.7851Z"></path>
@@ -24,12 +27,12 @@ const Navbar = () => {
           <path d="M30.4351,61.1758h-10.4155L0,116.838H10.3479L30.4351,61.1758Z"></path>
         </svg>
       </div>
-      <div className="elem">
-        <i className="ri-arrow-right-s-line"></i>
+      <div className={`${styles.elem} ${styles.elemAccent}`}>
+        <i className={`${styles.navIcon} ri-arrow-right-s-line`}></i>
         Our Showreel
       </div>
-      <div className="elem">
-        <i className="ri-menu-3-line"></i>
+      <div className={styles.elem}>
+        <i className={`${styles.navIcon} ri-menu-3-line`}></i>
       </div>
     </nav>
   );
