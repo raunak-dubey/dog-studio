@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import Dog from "./components/Dog";
-import Hero from "./Hero";
+import Hero from "./components/Hero";
 
 const App = () => {
   return (

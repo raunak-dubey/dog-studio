@@ -115,7 +115,7 @@ const Dog = () => {
       scrollTrigger: {
         trigger: "#hero",
         endTrigger: "#section-3",
-        markers: true,
+        // markers: true,
         start: "top top",
         end: "bottom bottom",
         scrub: true,
