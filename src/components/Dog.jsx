@@ -1,12 +1,12 @@
 import * as THREE from "three";
-import { useGLTF, useTexture, useAnimations } from "@react-three/drei";
+import { useGLTF, useTexture, useAnimations, Environment } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 const Dog = () => {
-  gsap.registerPlugin(useGSAP());
+
   gsap.registerPlugin(ScrollTrigger);
 
   const model = useGLTF("/models/dog.drc.glb");
@@ -26,7 +26,7 @@ const Dog = () => {
 
   const [normalMap] = useTexture(["/images/dog_normals.jpg"]).map((texture) => {
     texture.flipY = false;
-    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.colorSpace = THREE.NoColorSpace;
     return texture;
   });
 
@@ -111,6 +111,7 @@ const Dog = () => {
   dogMaterial.onBeforeCompile = onBeforeCompile
 
   model.scene.traverse((child) => {
+    if (!child.isMesh) return;
     if (child.name.includes("DOG")) {
       child.material = dogMaterial;
     } else {
@@ -124,8 +125,7 @@ const Dog = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#hero",
-        endTrigger: "#section-3",
-        // markers: true,
+        endTrigger: "#about",
         start: "top top",
         end: "bottom bottom",
         scrub: true,
@@ -158,6 +158,20 @@ const Dog = () => {
         "third"
       );
   });
+
+  useGSAP(() => {
+    const main = document.querySelector("main")
+    ScrollTrigger.create({
+      trigger: "#featuredProjects",
+      endTrigger: "#about",
+      start: "top -20%",
+      end: "bottom top",
+      markers: true,
+      onEnter: () => main.classList.add("noCanvasBg"),
+      onLeaveBack: () => main.classList.remove("noCanvasBg"),
+    });
+  });
+
 
   useEffect(() => {
     const matcapMap = {

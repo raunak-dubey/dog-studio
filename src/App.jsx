@@ -3,6 +3,7 @@ import Dog from "./components/Dog";
 import Hero from "./components/Hero/Hero";
 import Project from "./components/Project/Project";
 import ImgComponent from "./components/ImgComponent/ImgComponent";
+import About from "./components/About/About";
 
 const App = () => {
   return (
@@ -17,21 +18,27 @@ const App = () => {
           <ImgComponent id="kennedy" src="/images/kennedy.png" alt="kennedy" />
           <ImgComponent id="opera" src="/images/opera.png" alt="" />
         </div>
-        <Canvas id="canvas" className="canvas"
-          style={{
-            height: "100vh",
-            width: "100vw",
-            position: "fixed",
-            top: 0,
-            left: 0,
-          }}
-        >
-          <Dog />
-        </Canvas>
+
+        <div className="canvas-wrapper">
+          <Canvas id="canvas" className="canvas"
+            style={{
+              height: "100vh",
+              width: "100vw",
+              position: "fixed",
+              top: 0,
+              left: 0,
+              inset: 0,
+              zIndex: 3,
+              pointerEvents: "none",
+            }}
+          >
+            <Dog />
+          </Canvas>
+        </div>
 
         <Hero />
         <Project />
-        <section id="section-3"></section>
+        <About />
       </main>
     </>
   );

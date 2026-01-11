@@ -1,0 +1,59 @@
+.about {
+    padding-block: 10rem;
+    padding-inline: 10rem;
+    position: relative;
+    z-index: auto;
+
+    .top {
+        display: flex;
+        position: relative;
+
+        .left {
+            height: auto;
+            width: 50%;
+
+            .leftHeading {
+                font-family: GTSectraDisplay-Regular, Times, Georgia, serif;
+                font-size: 3.5rem;
+                font-weight: 400;
+                line-height: 1;
+            }
+        }
+
+        .bottom {
+            width: 495px;
+            margin-top: 280px;
+            padding-right: 25px;
+            position: relative;
+            z-index: 5;
+
+            .right {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                margin-right: -25px;
+                margin-left: -25px;
+
+                .para {
+                    height: auto;
+                    width: 50%;
+                    padding-right: 25px;
+                    padding-left: 25px;
+                    color: var(--color-para);
+                }
+            }
+        }
+    }
+}
+
+.about::after {
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: 0;
+    height: auto;
+    width: 100%;
+    content: "";
+    z-index: 2;
+    background: linear-gradient(0deg, #131419 25%, rgba(19, 20, 25, 0) 60%);
+}
