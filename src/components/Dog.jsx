@@ -166,7 +166,6 @@ const Dog = () => {
       endTrigger: "#about",
       start: "top -20%",
       end: "bottom top",
-      markers: true,
       onEnter: () => main.classList.add("noCanvasBg"),
       onLeaveBack: () => main.classList.remove("noCanvasBg"),
     });
